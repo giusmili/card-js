@@ -52,10 +52,16 @@ footer *{
 }
 /* responsive design */
 @media screen and (max-width: 50rem) {
+    body{
+        margin:0 1%;
+    }
     figure > img{
         width: 100%;
         aspect-ratio: 16 / 14;
         clip-path: circle(30%);
         
+    }
+    figure h2{
+        text-align: center;
     }
 }
