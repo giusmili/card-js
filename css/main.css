@@ -1,0 +1,61 @@
+@import url(./reset.css);
+
+/*
+
+======================
+|                    |
+|      THEME CSS     |
+|                    |
+======================
+
+*/
+:root{
+    --space-cadet: rgba(32, 31, 71, 1);
+    --eggplant: rgba(120, 78, 102, 1);
+    --sinopia: rgba(194, 92, 52, 1);
+    --color-default-link: #222;
+    --color-header-base: #fff;
+    --xx-large: 4.5rem;
+    --x-large: 3.5rem;
+    --large: 5rem;
+}
+header h1{
+    background-color: var(--space-cadet);
+    text-align: center;
+    color: var(--color-header-base);
+    line-height: 8rem;
+    font-size: var(--xx-large);
+    
+}
+main{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+}
+figure{
+    max-width: 80rem;
+    margin: 5rem auto 0;
+    /* filter: drop-shadow(0 0 0.75rem crimson); */
+    
+    
+}
+
+figure > img{
+    width: 100%;
+    aspect-ratio: 16 / 14;
+    clip-path: circle(43.64% at 45.4rem 35rem);
+    
+    
+}
+footer *{
+    text-align: center;
+}
+/* responsive design */
+@media screen and (max-width: 50rem) {
+    figure > img{
+        width: 100%;
+        aspect-ratio: 16 / 14;
+        clip-path: circle(30%);
+        
+    }
+}
