@@ -50,6 +50,11 @@ figure h2{
     color: #222;
     font-size: var(--x-large);
     font-weight: 200;
+    small{
+        font-size: x-large;
+        font-style: italic;
+        color: #a9a6a6;
+    }
 }
 
 figure > img{
