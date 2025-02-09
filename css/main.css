@@ -49,17 +49,30 @@ figure h2{
 
     color: #222;
     font-size: var(--x-large);
+    font-weight: 200;
 }
 
 figure > img{
     width: 100%;
     aspect-ratio: 16 / 14;
-    clip-path: circle(43.64% at 45.4rem 35rem);
+    clip-path: circle(40%);
     
     
 }
 footer *{
     text-align: center;
+}
+
+.btn-primary{
+    width: max-content;
+    line-height: 4.5rem;
+    padding: 0 2rem;
+    background-color: #564dff;
+    color: #fff;
+    border: 0;
+    border-radius: .4rem;
+    cursor: pointer;
+    margin: 1rem 0;
 }
 /* responsive design */
 @media screen and (max-width: 50rem) {

@@ -6,8 +6,25 @@ document.addEventListener("DOMContentLoaded", e => {
     console.log("chargement du document completée");
     /* const elParent = document.querySelector("ul")
     const elImg = document.querySelector("figure img") */
+    const copyButton = document.getElementById("copyButton");
+    const linkToCopy = document.getElementById("linkToCopy");
 
     for (let data in user) {
         data != "cover" ? elements.elParent.innerHTML += `<li><strong>${data}</strong> : ${user[data]} </li>` : elements.elImg.src = `${user[data]}`;
     }
+
+    /* link copy */
+
+    copyButton.addEventListener("click", async () => {
+        try {
+            await navigator.clipboard.writeText(linkToCopy.innerText);
+            Swal.fire({
+                title: "Very Good",
+                text: "Votre lien est copié",
+                icon: "success"
+            });
+        } catch (err) {
+            console.error("Erreur lors de la copie :", err);
+        }
+    });
 });

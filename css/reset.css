@@ -23,7 +23,9 @@ figure,blockquote{
     list-style-type: none;
     
 }
-
+kbd{
+    font-weight: normal;
+}
 /* reset inline */
 a{
     text-decoration: none;
