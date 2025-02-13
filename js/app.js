@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", e => {
     console.log("chargement du document completée");
     /* const elParent = document.querySelector("ul")
     const elImg = document.querySelector("figure img") */
-    const copyButton = document.getElementById("copyButton");
-    const linkToCopy = document.getElementById("linkToCopy");
+    const buttonCopy = document.getElementById("buttonCopy");
+    const copyLink = document.getElementById("copyLink");
 
     for (let data in user) {
         data != "cover" ? elements.elParent.innerHTML += `<li><strong>${data}</strong> : ${user[data]} </li>` : elements.elImg.src = `${user[data]}`;
@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", e => {
 
     /* link copy */
 
-    copyButton.addEventListener("click", async () => {
+    buttonCopy.addEventListener("click", async () => {
         try {
-            await navigator.clipboard.writeText(linkToCopy.innerText);
+            await navigator.clipboard.writeText(copyLink.innerText);
             Swal.fire({
                 title: "Very Good",
                 text: "Votre lien est copié",
